@@ -1,0 +1,150 @@
+{
+  "title": "Flutter for Harmony教程",
+  "description": "Flutter for Harmony电子书教程",
+  "author": "坚果派",
+  "language": "zh-hans",
+  "root": ".",
+  "plugins": [
+    "github-buttons@2.1.0",
+    "edit-link",
+    "splitter",
+    "tbfed-pagefooter",
+    "expandable-chapters",
+    "chapter-fold",
+    "back-to-top-button",
+    "code",
+    "pageview-count",
+    "popup",
+    "search-plus",
+    "-lunr",
+    "-search",
+    "splitter",
+    "-sharing",
+    "sharing-plus",
+    "theme-lou",
+    "mind-maps",
+    "emphasize",
+    "anchors",
+    "changyan",
+    "readmore",
+    "livereload",
+    "ace"
+  ],
+  "styles": {
+    "website": "styles/website.css"
+  },
+  "pluginsConfig": {
+    "github-buttons": {
+      "repo": "ITmxs/gitbook",
+      "types": [
+        "star",
+        "watch",
+        "fork"
+      ],
+      "size": "small"
+    },
+    "edit-link": {
+      "base": "https://github.com/ITmxs/gitbook/edit/master/",
+      "label": "编辑此页"
+    },
+    "readmore": {
+      "blogId": "27976-1678928361372-483",
+      "name": "坚果派",
+      "qrcode": "https://luckly007.oss-cn-beijing.aliyuncs.com/images/image-20230316085818226.png",
+      "keyword": "鸿蒙坚果"
+    },
+    "changyan": {
+      "appid": "cyvHoCPAs",
+      "conf": "0440cfc4168ba95d73cfc52dd4d5c60b"
+    },
+    "tbfed-pagefooter": {
+      "modify_label": "该文件修订时间：",
+      "modify_format": "YYYY-MM-DD HH:mm:ss"
+    },
+    "pluginsConfig": {
+      "expandable-chapters": {}
+    },
+    "sharing": {
+      "douban": false,
+      "facebook": false,
+      "google": false,
+      "pocket": false,
+      "qq": false,
+      "qzone": false,
+      "twitter": false,
+      "weibo": false,
+      "all": [
+        "qq",
+        "qzone",
+        "whatsapp",
+        "douban",
+        "facebook",
+        "google",
+        "instapaper",
+        "linkedin",
+        "messenger",
+        "twitter",
+        "weibo"
+      ]
+    },
+    "theme-lou": {
+      "color": "#FF4848",
+      "favicon": "assets/avatar.png",
+      "logo": "assets/avatar.png",
+      "appleTouchIconPrecomposed152": "assets/avatar.png",
+      "copyrightLogo": "assets/copyright.png",
+      "forbidCopy": true,
+      "search-placeholder": "输入关键字搜索",
+      "book-summary-title": "文章目录",
+      "book-anchor-title": "本章目录",
+      "hide-elements": [
+        ".summary .gitbook-link",
+        ".summary .divider"
+      ],
+      "copyright": {
+        "author": "vx:nut_pie"
+      }
+    }
+  },
+  "variables": {
+    "themeLou": {
+      "nav": [
+        {
+          "target": "_blank",
+          "url": "https://www.gitbook.com/",
+          "name": "坚果派官网"
+        },
+        {
+          "target": "_blank",
+          "url": "https://www.npmjs.com/package/package",
+          "name": "ArkUI实战"
+        },
+        {
+          "target": "_blank",
+          "url": "https://space.bilibili.com/480883651",
+          "name": "元服务开发实践"
+        },
+        {
+          "target": "_blank",
+          "url": "https://blog.51cto.com/jianguo",
+          "name": "OpenHarmony应用开发"
+        }
+      ],
+      "footer": {
+        "donate": {
+          "wechat": "https://luckly007.oss-cn-beijing.aliyuncs.com/img/image-20210922202901895.png",
+          "wxpay": "https://luckly007.oss-cn-beijing.aliyuncs.com/img/image-20210922202901895.png",
+          "alipay": "https://luckly007.oss-cn-beijing.aliyuncs.com/img/image-20210922202843746.png",
+          "title": "『赠人玫瑰 🌹 手有余香 』",
+          "avatar": "http://xkapp-uat.oss-cn-hangzhou.aliyuncs.com/2e7a3f70-80ab-4b50-93ec-a04dfeef949b/avatar-100.png",
+          "nickname": "breeze",
+          "button": "打赏",
+          "alipayText": "支付宝",
+          "wechatText": "微信",
+          "message": "随意打赏，但不要超过一顿早餐钱 💕"
+        },
+        "copyright": true
+      }
+    }
+  }
+}

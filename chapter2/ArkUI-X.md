@@ -1,0 +1,104 @@
+## ArkUI-X
+
+ArkUI-X旨在将ArkUI开发框架扩展至其他OS平台（Android/iOS/Windows等），使开发者能够基于ArkUI开发框架，复用绝大部分的应用代码（UI以及主要应用逻辑），即可部署到不同OS平台上。
+
+## ArkUI跨平台框架整体架构
+
+
+
+![img](https://nutpi-e41b.obs.cn-north-4.myhuaweicloud.com/ArkUI-X.png)
+
+## 设计思路
+
+从设计之初，**跨平台**就作为ArkUI最基本的设计目标之一，当前已支持基础的跨平台架构。相关的设计思路如下：
+
+1. 采用 **C++** 编写整体后端引擎代码，保持在多平台的可移植性，最小化平台依赖，降低平台移植成本。
+2. 整体绘制采用自渲染机制，降低平台依赖，同时进一步提升绘制效果的一致性。
+3. 抽象出平台适配层以及平台桥接层，以便不同平台的适配。
+
+
+
+## ArkUI主要包括模块
+
+ArkUI主要包括以下几个模块：
+
+1. 研发模型，兼容OpenHarmony应用的Stage开发模型，支持基于ArkTS的声明式开发范式，可跨平台。
+2. 声明式UI后端引擎，包括布局，渲染，C++ UI组件，事件机制等，可跨平台。
+3. API扩展机制，基于NAPI机制，可跨平台。 不同平台需要各自扩展具体的API实现。
+4. 工具链/SDK, 工具链可跨平台，SDK需基于不同平台构建。
+
+另外，ArkUI依赖的ArkTS引擎以及图形引擎，也可跨平台。
+
+ArkUI声明式UI后端引擎，主要完成整体pipeline流程控制、视图更新、布局系统、多页面管理、事件分发和回调、焦点管理、动画机制、主题机制、资源管理/缓存/provider等。 其中的UI组件，主要通过显示相关组件细粒度化，动画、事件、焦点等机制组件化，满足适配不同前端所需要的灵活性。
+
+整体的跨平台需求，就是扩展ArkUI开发框架到其他OS平台，帮助开发者降低多平台应用开发成本。
+
+通过ACE Tools命令行工具创建跨平台应用工程，开发者基于一套主代码，就可以构建支持多平台的精美、高性能应用。
+
+
+
+### 跨平台应用包结构设计
+
+跨平台应用目录结构，包含一套为ArkUI-X开发者提供的应用工程模板，提供构建OpenHarmony应用、Android应用、iOS应用的能力。应用工程包结构设计如下：
+
+```
+ArkUI-X应用工程
+  ├── .arkui-x
+  │   ├── android                 // Android平台相关代码
+  │   └── ios                     // iOS平台相关代码
+  ├── .hvigor
+  ├── .idea
+  ├── AppScope
+  ├── entry
+  ├── hvigor
+  ├── oh_modules
+  ├── build-profile.json5
+  ├── hvigorfile.ts
+  ├── local.properties
+  └── oh-package.json5
+```
+
+ArkUI-X应用目录结构设计思想是从OpenHarmony应用工程原生支持跨平台角度出发，在OpenHarmony应用工程之上叠加Android和iOS应用工程，ArkTS代码和resources资源编辑仍在OpenHarmony侧完成，Native代码在各自平台应用工程中完成。
+
+
+
+
+
+### 跨平台命令行工具ACE Tools
+
+ACE Tools命令行工具作为ArkUI-X跨平台应用构建工具，具有创建/编译/安装/运行调试OpenHarmony、Android和iOS应用的能力。
+
+```
+ACE Tools代码结构
+ cli
+  ├─node_modules
+  ├─src
+  │  ├─ace-build                 // 构建跨平台应用安装包
+  │  │  ├─ace-compiler
+  │  │  └─ace-packager
+  │  ├─ace-check                 // 查验ArkUI跨平台应用开发依赖的的库和工具链是否完整
+  │  ├─ace-clean                 // 清理跨平台应用编译结果
+  │  ├─ace-config                // 配置ArkUI跨平台应用开发环境
+  │  ├─ace-create                // 创建ArkUI跨平台应用工程
+  │  │  ├─aar
+  │  │  ├─ability
+  │  │  ├─component
+  │  │  ├─framework
+  │  │  ├─module
+  │  │  └─project
+  │  ├─ace-devices               // 列出当前PC所链接的各平台设备
+  │  ├─ace-install               // 将跨平台应用安装到连接的设备上
+  │  ├─ace-launch                // 在设备上运行跨平台应用
+  │  ├─ace-log                   // 滚动展示正在运行的跨平台应用的日志
+  │  ├─ace-run                   // 运行跨平台应用包
+  │  ├─ace-test                  // 执行测试代码
+  │  ├─ace-uninstall             // 将跨平台应用从设备上卸载
+  │  ├─bin                       // 命令行入口脚本
+  │  └─util
+  └─templates                    // 跨平台应用工程模板
+```
+
+## 创建项目
+
+![image-20250417121827104](https://nutpi-e41b.obs.cn-north-4.myhuaweicloud.com/image-20250417121827104.png)
+
