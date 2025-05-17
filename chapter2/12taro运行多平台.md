@@ -1,0 +1,157 @@
+
+
+## H5
+
+### 编译命令
+
+```bash
+# yarn
+$ yarn dev:h5
+$ yarn build:h5
+
+# npm script
+$ npm run dev:h5
+$ npm run build:h5
+
+# 仅限全局安装
+$ taro build --type h5 --watch
+$ taro build --type h5
+
+# npx 用户也可以使用
+$ npx taro build --type h5 --watch
+$ npx taro build --type h5
+```
+
+## 微信小程序
+
+### 编译命令
+
+```bash
+# yarn
+$ yarn dev:weapp
+$ yarn build:weapp
+
+# npm script
+$ npm run dev:weapp
+$ npm run build:weapp
+
+# 仅限全局安装
+$ taro build --type weapp --watch
+$ taro build --type weapp
+
+# npx 用户也可以使用
+$ npx taro build --type weapp --watch
+$ npx taro build --type weapp
+
+# watch 同时开启压缩
+$ set NODE_ENV=production && taro build --type weapp --watch # CMD
+$ NODE_ENV=production taro build --type weapp --watch # Bash
+```
+
+### 环境及依赖检测
+
+Taro 提供了命令来一键检测 Taro 环境及依赖的版本等信息，方便大家查看项目的环境及依赖，排查环境问题。在提 issue 的时候，请附上 `taro info` 打印的信息，帮助开发人员快速定位问题。
+
+
+
+```js
+ianguo@localhost taro-ohos % taro info
+👽 Taro v4.1.0
+
+
+  Taro CLI 4.1.0 environment info:
+    System:
+      OS: macOS 13.4.1
+      Shell: 5.9 - /bin/zsh
+    Binaries:
+      Node: 18.20.1 - /Applications/DevEco-Studio.app/Contents/tools/node/bin/node
+      Yarn: 1.22.22 - /usr/local/bin/yarn
+      npm: 10.5.0 - /Applications/DevEco-Studio.app/Contents/tools/node/bin/npm
+    npmPackages:
+      @tarojs/cli: 4.1.0 => 4.1.0 
+      @tarojs/components: 4.1.0 => 4.1.0 
+      @tarojs/helper: 4.1.0 => 4.1.0 
+      @tarojs/plugin-framework-react: 4.1.0 => 4.1.0 
+      @tarojs/plugin-platform-alipay: 4.1.0 => 4.1.0 
+      @tarojs/plugin-platform-h5: 4.1.0 => 4.1.0 
+      @tarojs/plugin-platform-harmony-hybrid: 4.1.0 => 4.1.0 
+      @tarojs/plugin-platform-jd: 4.1.0 => 4.1.0 
+      @tarojs/plugin-platform-qq: 4.1.0 => 4.1.0 
+      @tarojs/plugin-platform-swan: 4.1.0 => 4.1.0 
+      @tarojs/plugin-platform-tt: 4.1.0 => 4.1.0 
+      @tarojs/plugin-platform-weapp: 4.1.0 => 4.1.0 
+      @tarojs/react: 4.1.0 => 4.1.0 
+      @tarojs/runtime: 4.1.0 => 4.1.0 
+      @tarojs/shared: 4.1.0 => 4.1.0 
+      @tarojs/taro: 4.1.0 => 4.1.0 
+      @tarojs/vite-runner: 4.1.0 => 4.1.0 
+      babel-preset-taro: 4.1.0 => 4.1.0 
+      eslint-config-taro: 4.1.0 => 4.1.0 
+      react: ^18.0.0 => 18.3.1 
+    npmGlobalPackages:
+      typescript: 5.2.2
+
+jianguo@localhost taro-ohos % 
+```
+
+### Taro Doctor
+
+Taro Doctor 就像一个医生一样，可以诊断项目的依赖、设置、结构，以及代码的规范是否存在问题，并尝试给出解决方案。
+
+但和真正的医生不一样，Taro Doctor 不需要排队挂号，也不用花钱。你只需要在终端运行命令：`taro doctor`，就像图里一样：
+
+```js
+ianguo@localhost taro-ohos % taro doctor
+👽 Taro v4.1.0
+
+🎯 验证环境信息！
+[✓]  安装的 Node 版本为 v18.20.1
+
+🎯 验证项目配置 (/config/index.js) ！
+[✓]  成功获取远程配置验证文件：https://raw.githubusercontent.com/NervJS/taro-doctor/main/assets/config_schema.json
+[✓]  项目配置正确！
+
+🎯 验证项目依赖安装正确性！
+[!]  本地已经安装了 Taro CLI 版本为 4.1.0，建议使用 npm script 来执行项目的预览和打包
+本地安装的 Taro 相关依赖版本信息如下：
+- @tarojs/components: 4.1.0
+- @tarojs/helper: 4.1.0
+- @tarojs/plugin-framework-react: 4.1.0
+- @tarojs/plugin-platform-alipay: 4.1.0
+- @tarojs/plugin-platform-h5: 4.1.0
+- @tarojs/plugin-platform-harmony-hybrid: 4.1.0
+- @tarojs/plugin-platform-jd: 4.1.0
+- @tarojs/plugin-platform-qq: 4.1.0
+- @tarojs/plugin-platform-swan: 4.1.0
+- @tarojs/plugin-platform-tt: 4.1.0
+- @tarojs/plugin-platform-weapp: 4.1.0
+- @tarojs/react: 4.1.0
+- @tarojs/runtime: 4.1.0
+- @tarojs/shared: 4.1.0
+- @tarojs/taro: 4.1.0
+- @tarojs/cli: 4.1.0
+- @tarojs/vite-runner: 4.1.0
+
+🎯 验证最佳实践！
+[!]  没有检查到常见的测试依赖(jest/mocha/ava/tape/jesmine/karma), 配置测试可以帮助提升项目质量
+     可以参考 https://github.com/NervJS/taro-ui-sample 项目, 其中已经包含了完整的测试配置与范例
+[!]  没有检查到 Readme (readme/readme.md/readme.markdown), 编写 Readme 可以方便其他人了解项目
+
+=============
+
+WARNING: You are currently running a version of TypeScript which is not officially supported by @typescript-eslint/typescript-estree.
+
+You may find that it works just fine, or you may not.
+
+SUPPORTED TYPESCRIPT VERSIONS: >=4.3.5 <5.4.0
+
+YOUR TYPESCRIPT VERSION: 5.8.3
+
+Please only submit bug reports when using the officially supported version.
+
+=============
+🎯 检查 ESLint (以下为 ESLint 的输出)！
+[✓] Eslint 检查通过！
+jianguo@localhost taro-ohos % 
+```
+
