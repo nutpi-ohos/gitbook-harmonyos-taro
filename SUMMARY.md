@@ -19,3 +19,11 @@
   - [5.4 Taro配置](./chapter3/4.Taro配置.md)
   - [5.5 鸿蒙版Taro 搭建开发环境](./chapter3/5.鸿蒙版Taro 搭建开发环境.md)
   - [5.6 鸿蒙版taro编译配置](./chapter3/6.鸿蒙版taro编译配置.md)
+* 6.其他主题
+  - [6.1 介绍](./chapter4/1.介绍.md)
+  - [6.2 基础概念](./chapter4/2.基础概念.md)
+  - [6.3 视频播放器](./chapter4/3.视频播放器.md)
+  - [6.4 oaid](./chapter4/4.oaid.md)
+  - [6.5 进阶主题](./chapter4/5.进阶主题.md)
+  - [6.6 websocket](./chapter4/6.websocket.md)
+  - [6.7 git](./chapter4/6.git.md)
