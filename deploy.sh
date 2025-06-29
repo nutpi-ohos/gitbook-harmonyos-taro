@@ -14,5 +14,6 @@ git commit -m "$msg"
 git push    origin master 
 git push    gitee 
 git push    atomgit
+git push    github
 
 
