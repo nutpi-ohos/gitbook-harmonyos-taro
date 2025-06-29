@@ -1,6 +1,6 @@
 ## 前言
 
-关注到目前很多人都很是关注Flutter For Harmony 于是集合坚果派的力量，利用业余时间写了这本入门的《Flutter For Harmony 于》电子书并把它挂到网站上，希望能给读者带来一点帮助，也算为 OpenHarmony 和HarmonyOS以及整个大的鸿蒙生态的发展做一点贡献。
+关注到目前很多人都很是关注Taro For Harmony 于是集合坚果派的力量，利用业余时间写了这本入门的《Taro For Harmony 》电子书并把它挂到网站上，希望能给读者带来一点帮助，也算为 OpenHarmony 和HarmonyOS以及整个大的鸿蒙生态的发展做一点贡献。
 
 
 
