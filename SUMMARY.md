@@ -7,15 +7,15 @@
 
 ## 第二篇：Taro 入门
 
-* [3.1 Taro 框架介绍](./chapter3/1.Taro介绍.md)
-* [3.2 安装与配置 Taro](./chapter3/2.安装Taro.md)
-* [3.3 Taro 多平台运行](./chapter3/3.Taro运行多平台.md)
-* [3.4 Taro 项目配置详解](./chapter3/4.Taro配置.md)
+* [3.1 Taro 框架介绍](./chapter1/1.Taro介绍.md)
+* [3.2 安装与配置 Taro](./chapter1/2.安装Taro.md)
+* [3.3 Taro 多平台运行](./chapter1/3.Taro运行多平台.md)
+* [3.4 Taro 项目配置详解](./chapter1/4.Taro配置.md)
 
 ## 第三篇：鸿蒙平台开发
 
-* [4.1 鸿蒙版 Taro 开发环境搭建](./chapter3/5.鸿蒙版Taro搭建开发环境.md)
-* [4.2 鸿蒙版 Taro 编译配置](./chapter3/6.鸿蒙版taro编译配置.md)
+* [4.1 鸿蒙版 Taro 开发环境搭建](./chapter1/5.鸿蒙版Taro搭建开发环境.md)
+* [4.2 鸿蒙版 Taro 编译配置](./chapter1/6.鸿蒙版taro编译配置.md)
 
 ## 第四篇：进阶开发
 
